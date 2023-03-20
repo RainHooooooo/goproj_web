@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "game/archive;archive";
+
+message Archive {
+  string content = 1; // base64 encoded
+  int32 id = 2;
+  int32 ver = 3;
+  string user = 4;
+}
+
+message ArchiveFile {
+  Archive archive = 1;
+  int64 stamp = 2;
+}
+ 
+message User {
+  string user = 1;
+}
